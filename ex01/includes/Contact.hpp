@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/02 13:25:30 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/02 13:25:32 by cecompte         ###   ########.fr       */
+/*   Created: 2025/12/02 14:43:05 by cecompte          #+#    #+#             */
+/*   Updated: 2025/12/02 17:55:37 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-int main(int argc, char **argv) 
-{
-	if (argc < 2)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-	{
-		for (int i = 1; i < argc; i++)
-		{
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char)std::toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
-	return (0);
-} 
+#include <string>
+
+class Contact {
+public:
+	Contact(std::string pfirst, std::string plast, std::string pnick,
+		std::string pphone, std::string psecret);
+	std::string first;
+	std::string last;
+	std::string nick;
+	std::string phone;
+	std::string secret;
+};
+
+#endif

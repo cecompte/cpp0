@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/02 13:25:30 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/02 13:25:32 by cecompte         ###   ########.fr       */
+/*   Created: 2025/12/02 17:51:15 by cecompte          #+#    #+#             */
+/*   Updated: 2025/12/02 17:58:20 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "PhoneBook.hpp"
 #include <iostream>
-#include <cctype>
 
-int main(int argc, char **argv) 
-{
-	if (argc < 2)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-	{
-		for (int i = 1; i < argc; i++)
-		{
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char)std::toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
-	return (0);
-} 
+Contact::Contact(std::string pfirst, std::string plast, std::string pnick, 
+	std::string pphone, std::string psecret) : first(pfirst), last(plast), nick(pnick), 
+		phone(pphone), secret(psecret) {
+	std::cout << "Constructor called" << std::endl;
+	std::cout << "first name: " << this->first << std::endl;
+	std::cout << "last name: " << this->last << std::endl;
+    return ;
+}
