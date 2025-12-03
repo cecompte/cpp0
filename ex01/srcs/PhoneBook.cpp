@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:26:16 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 17:40:59 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/03 17:41:54 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int PhoneBook::getIndex() {
         }
     }
 }
+
 void    PhoneBook::search(void) {
     displayTable();
     int index = getIndex();
