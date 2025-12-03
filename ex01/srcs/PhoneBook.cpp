@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:26:16 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 17:29:25 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/03 17:40:59 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ PhoneBook::PhoneBook(void) {
 }
 
 void    PhoneBook::addContact(void) {
-    std::cout << "index = " << this->index << std::endl;
     this->contactList[this->index].setFields();
     
     if (this->currentSize < this->maxSize)
@@ -54,11 +53,13 @@ int PhoneBook::getIndex() {
 		std::getline(std::cin, input);
 		if (input.empty())
             std::cout << "Field cannot be empty. Please try again.\n";
-        else if (isNumber(input)) 
+        else if (!isNumber(input)) 
+            std::cout << "Field has to be a number. Please try again.\n";
+        else
         {
             int index = atoi(input.c_str());
             if (index > this->currentSize || !index)
-                std::cout << "Index number is out of range. Please try again.\n";
+                std::cout << "Index number should range from 1 - " << this->currentSize << ". Please try again.\n";
             else
                 return (index);
         }
