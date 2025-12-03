@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 17:51:15 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 17:29:42 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/03 18:25:16 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,7 @@ void	Contact::printField(std::string str, int flag) {
 		std::cout << str << std::endl;
 	else
 	{
-		if (len == 10)
-			std::cout << str;
-		else if (len > 10)
+		if (len > 10)
 		{
 			str.resize(9);
 			str.push_back('.');
