@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 17:51:15 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 18:25:16 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:52:37 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <string>
 
-std::string	Contact::prompt(std::string message) {
+std::string	Contact::_prompt(std::string message) {
 	std::string input;
 
 	while (true) {
@@ -28,11 +28,11 @@ std::string	Contact::prompt(std::string message) {
 
 void	Contact::setFields() {
 	
-	this->firstName = this->prompt("Enter first name: ");
-	this->lastName = this->prompt("Enter last name: ");
-	this->nickName = this->prompt("Enter nickname: ");
-	this->phoneNumber = this->prompt("Enter phone number: ");
-	this->darkSecret = this->prompt("Enter darkest secret: ");
+	this->_firstName = this->_prompt("Enter first name: ");
+	this->_lastName = this->_prompt("Enter last name: ");
+	this->_nickName = this->_prompt("Enter nickname: ");
+	this->_phoneNumber = this->_prompt("Enter phone number: ");
+	this->_darkSecret = this->_prompt("Enter darkest secret: ");
 }
 
 void	Contact::printField(std::string str, int flag) {
@@ -58,22 +58,22 @@ void	Contact::printField(std::string str, int flag) {
 }
 
 void	Contact::displayRow() {
-	printField(this->firstName, 0);
+	printField(this->_firstName, 0);
 	std::cout << "|";
-	printField(this->lastName, 0);
+	printField(this->_lastName, 0);
 	std::cout << "|";
-	printField(this->nickName, 0);
+	printField(this->_nickName, 0);
 	std::cout << "|";
-	printField(this->phoneNumber, 0);
+	printField(this->_phoneNumber, 0);
 	std::cout << "|";
-	printField(this->darkSecret, 0);
+	printField(this->_darkSecret, 0);
 	std::cout << "\n";
 }
 
 void	Contact::displaySearch() {
-	printField(this->firstName, 1);
-	printField(this->lastName, 1);
-	printField(this->nickName, 1);
-	printField(this->phoneNumber, 1);
-	printField(this->darkSecret, 1);
+	printField(this->_firstName, 1);
+	printField(this->_lastName, 1);
+	printField(this->_nickName, 1);
+	printField(this->_phoneNumber, 1);
+	printField(this->_darkSecret, 1);
 }

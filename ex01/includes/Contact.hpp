@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 14:43:05 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 16:54:59 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:51:03 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 class Contact {
 private:
-	std::string firstName;
-	std::string lastName;
-	std::string nickName;
-	std::string phoneNumber;
-	std::string darkSecret;
-	std::string prompt(std::string message);
+	std::string _firstName;
+	std::string _lastName;
+	std::string _nickName;
+	std::string _phoneNumber;
+	std::string _darkSecret;
+	std::string _prompt(std::string message);
 public:
 	void		setFields();
 	void 		printField(std::string str, int flag);

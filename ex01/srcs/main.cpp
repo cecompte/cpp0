@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:30:17 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 18:25:22 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:59:57 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,5 @@ int main()
 		std::cout << "Input command [ADD, SEARCH or EXIT]: ";
 		std::getline(std::cin, command);
 	}
-	exit(0);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:25:12 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/03 17:25:34 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:51:23 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 class PhoneBook {
 private:
-	Contact		contactList[8];
-	int			index;
-	int			currentSize;
-	int			maxSize;
-	bool		isNumber(std::string str);
-	int			getIndex();
+	Contact		_contactList[8];
+	int			_index;
+	int			_currentSize;
+	int			_maxSize;
+	bool		_isNumber(std::string str);
+	int			_getIndex();
 public:
 	PhoneBook(void);
 	void 		addContact();
