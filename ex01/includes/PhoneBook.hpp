@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:25:12 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/10 14:51:23 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:16:15 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ private:
 	int			_index;
 	int			_currentSize;
 	int			_maxSize;
-	bool		_isNumber(std::string str);
-	int			_getIndex();
+	bool		_isNumber(std::string str) const;
+	int			_getIndex() const;
 public:
 	PhoneBook(void);
 	void 		addContact();
-	void 		displayTable();
-	void 		search();
+	void 		displayTable() const;
+	void 		search() const;
 };
 
 #endif

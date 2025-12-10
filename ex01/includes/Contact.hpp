@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 14:43:05 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/10 14:51:03 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:15:28 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ private:
 	std::string _nickName;
 	std::string _phoneNumber;
 	std::string _darkSecret;
-	std::string _prompt(std::string message);
+	std::string _prompt(std::string message) const;
 public:
 	void		setFields();
-	void 		printField(std::string str, int flag);
-	void 		displayRow();
-	void		displaySearch();
+	void 		printField(std::string str, int flag) const;
+	void 		displayRow() const;
+	void		displaySearch() const;
 };
 
 #endif

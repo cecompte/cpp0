@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 17:51:15 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/10 14:52:37 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:15:51 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <string>
 
-std::string	Contact::_prompt(std::string message) {
+std::string	Contact::_prompt(std::string message) const {
 	std::string input;
 
 	while (true) {
@@ -35,7 +35,7 @@ void	Contact::setFields() {
 	this->_darkSecret = this->_prompt("Enter darkest secret: ");
 }
 
-void	Contact::printField(std::string str, int flag) {
+void	Contact::printField(std::string str, int flag) const {
 	size_t	len = str.size();
 
 	if (flag == 1)
@@ -57,7 +57,7 @@ void	Contact::printField(std::string str, int flag) {
 	}
 }
 
-void	Contact::displayRow() {
+void	Contact::displayRow() const {
 	printField(this->_firstName, 0);
 	std::cout << "|";
 	printField(this->_lastName, 0);
@@ -70,7 +70,7 @@ void	Contact::displayRow() {
 	std::cout << "\n";
 }
 
-void	Contact::displaySearch() {
+void	Contact::displaySearch() const {
 	printField(this->_firstName, 1);
 	printField(this->_lastName, 1);
 	printField(this->_nickName, 1);
