@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:26:16 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/10 15:16:38 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:55:19 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ void    PhoneBook::addContact(void) {
 
 void    PhoneBook::displayTable(void) const {
     for (int i = 0; i < this->_currentSize; i++)
+    {
+        std::cout << "         " << i + 1 << "|";
         this->_contactList[i].displayRow();
+    }
 }
 
 bool    PhoneBook::_isNumber(std::string str) const {

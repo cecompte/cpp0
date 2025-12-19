@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 17:51:15 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/10 15:15:51 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:57:45 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,6 @@ void	Contact::displayRow() const {
 	printField(this->_lastName, 0);
 	std::cout << "|";
 	printField(this->_nickName, 0);
-	std::cout << "|";
-	printField(this->_phoneNumber, 0);
-	std::cout << "|";
-	printField(this->_darkSecret, 0);
 	std::cout << "\n";
 }
 
