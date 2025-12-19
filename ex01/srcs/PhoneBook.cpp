@@ -6,7 +6,7 @@
 /*   By: cecompte <cecompte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:26:16 by cecompte          #+#    #+#             */
-/*   Updated: 2025/12/18 11:55:19 by cecompte         ###   ########.fr       */
+/*   Updated: 2025/12/19 11:43:15 by cecompte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ int PhoneBook::_getIndex() const {
 }
 
 void    PhoneBook::search(void) const {
+    if (!this->_index)
+    {
+        std::cout << "Phonebook is empty. Please add a contact.\n";
+        return;
+    }
     displayTable();
     int index = _getIndex();
     this->_contactList[index - 1].displaySearch();
